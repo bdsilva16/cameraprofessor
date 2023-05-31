@@ -5,6 +5,7 @@ import { Button, Text } from 'react-native';
 import { StyleSheet } from 'react-native';
 import * as MediaLibrary from 'expo-media-library';
 import { Image } from 'expo-image';
+import { Entypo } from '@expo/vector-icons';
 
 
 export default function App() {
@@ -50,12 +51,10 @@ export default function App() {
         style={styles.button}
         onPress={() => { takePicture() }}>
 
-        <Text
-          style={{ color: "#fff", fontSize: 25 }}>
-          Tirar Foto
-        </Text>
+        <Entypo name="camera" size={40} color="black" />
+
       </TouchableHighlight>
-      {/* <Button title='Tirar foto' onPress={() => { takePicture() }} /> */}
+
     </View>
   );
 }
@@ -63,8 +62,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent:'center',
-    alignItems:'center'
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 
   styleCamera: {
@@ -73,23 +72,24 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    justifyContent:"center",
-    alignItems:"center",
-    elevation:6,
-    backgroundColor: "#6676f1",
-    width:100,
-    height:100,
-    borderRadius:100,
-    position:"absolute",
-    bottom:50
-    
-  }, 
+    justifyContent: "center",
+    alignItems: "center",
+    elevation: 6,
+    backgroundColor: "#fff",
+    width: 100,
+    height: 100,
+    borderRadius: 100,
+    position: "absolute",
+    bottom: 50,
+    borderColor:"red",
+    borderWidth:2
+  },
 
-  image:{
-    
-    flex:1,
-    width:'100%',
-    height:'100%' 
+  image: {
+
+    flex: 1,
+    width: '100%',
+    height: '100%'
   }
 
 
